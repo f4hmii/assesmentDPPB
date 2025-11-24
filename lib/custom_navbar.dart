@@ -13,7 +13,7 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
       leading: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: const Text(
-          'MOVR',
+          'M',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -22,6 +22,7 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       title: Container(
+         width: 200,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: TextField(
           decoration: InputDecoration(
@@ -31,6 +32,7 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
               borderSide: BorderSide.none,
+              
             ),
             prefixIcon: const Icon(
               Icons.search,

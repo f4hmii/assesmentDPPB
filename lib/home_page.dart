@@ -20,16 +20,14 @@ class HomePage extends StatelessWidget {
             Container(
               height: 250,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xFFF2F2F2),
-              ),
+              decoration: const BoxDecoration(color: Color(0xFFF2F2F2)),
               child: Stack(
                 children: [
                   // Banner image
                   Image.network(
                     'https://i.pinimg.com/736x/b8/57/75/b85775887cb8e7de4468f06a32292604.jpg',
                     width: double.infinity,
-                    height: 850,
+
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) => Container(
                       width: double.infinity,
@@ -78,10 +76,7 @@ class HomePage extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: const Text(
                 'Featured Products',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
 
@@ -90,26 +85,29 @@ class HomePage extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: 6, // Show 6 placeholder products
+              itemCount: 6,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
-                childAspectRatio: 0.8,
+                // UBAH DARI 0.65 MENJADI 0.60 atau 0.55 agar kartu lebih panjang ke bawah
+                childAspectRatio: 0.58,
               ),
               itemBuilder: (context, index) {
                 return ProductCard(
-                  imageUrl: 'https://picsum.photos/150',
-                  title: 'Product Name $index',
-                  price: '\$${(index + 1) * 10}.00',
+                  imageUrl:
+                      'https://i.pinimg.com/736x/6e/ea/43/6eea4384453b2312dbdd941acde3f6b8.jpg',
+                  title: 'Baju Pria',
+                  price: 'Rp ${(index + 1) * 10000}',
                   onCheckoutPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ProductDetailPage(
-                          productName: 'Product Name $index',
-                          price: '\$${(index + 1) * 10}.00',
-                          imageUrl: 'https://picsum.photos/150',
+                          productName: 'Baju Pria',
+                          price: 'Rp ${(index + 1) * 10000}',
+                          imageUrl:
+                              'https://i.pinimg.com/736x/6e/ea/43/6eea4384453b2312dbdd941acde3f6b8.jpg',
                         ),
                       ),
                     );

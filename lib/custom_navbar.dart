@@ -8,19 +8,22 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      elevation: 0,
-      leading: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: const Text(
-          'M',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-        ),
+  backgroundColor: Colors.white,
+  elevation: 0,
+  leadingWidth: 100, // Tambahkan ini agar area leading melebar
+  leading: Container(
+    padding: const EdgeInsets.symmetric(horizontal: 16),
+    alignment: Alignment.centerLeft, // Pastikan alignment pas
+    child: const Text(
+      'MOVR',
+      softWrap: false, // Mencegah teks turun ke bawah
+      style: TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        fontSize: 20,
       ),
+    ),
+),
       title: Container(
          width: 200,
         padding: const EdgeInsets.symmetric(horizontal: 16),

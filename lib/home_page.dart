@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   // Banner image
                   Image.network(
-                    'https://i.pinimg.com/736x/b8/57/75/b85775887cb8e7de4468f06a32292604.jpg',
+                    'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                     width: double.infinity,
 
                     fit: BoxFit.cover,
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ProductCard(
                   imageUrl:
-                      'https://i.pinimg.com/736x/6e/ea/43/6eea4384453b2312dbdd941acde3f6b8.jpg',
+                      'https://media.istockphoto.com/id/2183222014/id/foto/seorang-pemuda-bergaya-berpose-dengan-mantel-hitam-dan-beanie-kuning-dengan-latar-belakang.jpg?s=1024x1024&w=is&k=20&c=Iov72DTjc6ocOQwfLfywRuW0GKoQK76ZwWqa_DePRpQ=',
                   title: 'Baju Pria',
                   price: 'Rp ${(index + 1) * 10000}',
                   onCheckoutPressed: () {

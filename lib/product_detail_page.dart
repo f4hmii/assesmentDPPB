@@ -12,7 +12,7 @@ class ProductDetailPage extends StatelessWidget {
     this.productName = 'Product Name',
     this.price = '\$0.00',
     this.description = 'This is a placeholder description for the product. This product has great features and is perfect for your needs.',
-    this.imageUrl = 'https://via.placeholder.com/400',
+    this.imageUrl = 'https://media.istockphoto.com/id/2183222014/id/foto/seorang-pemuda-bergaya-berpose-dengan-mantel-hitam-dan-beanie-kuning-dengan-latar-belakang.jpg?s=1024x1024&w=is&k=20&c=Iov72DTjc6ocOQwfLfywRuW0GKoQK76ZwWqa_DePRpQ=',
   }) : super(key: key);
 
   @override

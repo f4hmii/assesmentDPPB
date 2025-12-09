@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile_page.dart';
+import 'cart_page.dart'; // Pastikan file cart_page.dart sudah dibuat
 
 class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -9,24 +10,24 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-  backgroundColor: Colors.white,
-  elevation: 0,
-  leadingWidth: 100, // Tambahkan ini agar area leading melebar
-  leading: Container(
-    padding: const EdgeInsets.symmetric(horizontal: 16),
-    alignment: Alignment.centerLeft, // Pastikan alignment pas
-    child: const Text(
-      'MOVR',
-      softWrap: false, // Mencegah teks turun ke bawah
-      style: TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-        fontSize: 20,
+      backgroundColor: Colors.white,
+      elevation: 0,
+      leadingWidth: 100,
+      leading: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        alignment: Alignment.centerLeft,
+        child: const Text(
+          'MOVR',
+          softWrap: false,
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
       ),
-    ),
-),
       title: Container(
-         width: 200,
+        width: 200,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: TextField(
           decoration: InputDecoration(
@@ -36,7 +37,6 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
               borderSide: BorderSide.none,
-              
             ),
             prefixIcon: const Icon(
               Icons.search,
@@ -55,7 +55,13 @@ class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
             color: Colors.black,
           ),
           onPressed: () {
-            // Navigate to cart page
+            // Navigasi ke halaman CartPage
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const CartPage(),
+              ),
+            );
           },
         ),
         // User icon

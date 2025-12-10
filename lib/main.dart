@@ -10,7 +10,7 @@ void main() {
 }
 
 class MovrApp extends StatelessWidget {
-  const MovrApp({Key? key}) : super(key: key);
+  const MovrApp({Key? key}) : super(key: key);>
 
   @override
   Widget build(BuildContext context) {
